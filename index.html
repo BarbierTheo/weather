@@ -1,56 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    
+    <title>Weez'r</title>
+
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <!-- npx tailwindcss -i ./assets/css/dist.css -o ./assets/css/tailwind.css --watch -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gradient-to-br from-blue-400 min-h-screen">
 
-<nav class="">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Weather</span>
-      </a>
-      <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-hamburger" aria-expanded="false">
-        <span class="sr-only">Ouvrir le menu principal</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
-      <div class="hidden w-full" id="navbar-hamburger">
-        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50">
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100" aria-current="page">Accueil</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Villes favorites</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100">Rechercher une ville</a>
-          </li>
-        </ul>
-      </div>
+    <div class="flex flex-col">
+        <div class="flex flex-row justify-between px-8 pt-5">
+            <div class="flex flex-col">
+                <p class="text-3xl text-gray-50">Le Havre</p>
+                <p class="font-light text-gray-300">13/01/2025 13:29</p>
+            </div>
+            <a href="" class="self-center"><svg class="w-[42px] h-[42px] text-gray-50" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                        d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z" />
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"
+                        d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="flex my-3">
+            <img src="./assets/img/example.png" class="w-[12rem]" alt="">
+
+            <div class="flex flex-col gap-1 mb-4 self-center">
+
+                <p class=" text-2xl text-gray-100 font-light">particulièrement nuageux</p>
+                <p class=" text-5xl text-gray-50">2°c</p>
+                <p>Ressenti : 4°c</p>
+                <div class="flex gap-8 text-lg">
+                    <p>Min -2°c</p>
+                    <p>Max 8°c</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col glass w-11/12 m-auto rounded-xl justify-center gap-2 text-white p-2">
+            <div class="flex flex-row justify-around">
+
+
+                <div class="flex flex-col justify-around w-4/12 text-center">
+                    <i class='bx bx-water text-5xl'></i>
+                    <div>
+                        <p class="text-white self-center">80%</p>
+                        <p class="text-white self-center font-semibold text-sm">Humidité</p>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col justify-around w-4/12 text-center">
+                    <svg class="w-[48px] h-[48px] text-yellow-400 self-center" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <div>
+                        <p class="text-white self-center">18h52</p>
+                        <p class="text-white self-center font-semibold text-sm">Coucher du soleil</p>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col justify-around w-4/12">
+                    <svg class="w-[48px] h-[48px] text-gray-50 self-center" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M12 2a1 1 0 0 1 .932.638l7 18a1 1 0 0 1-1.326 1.281L13 19.517V13a1 1 0 1 0-2 0v6.517l-5.606 2.402a1 1 0 0 1-1.326-1.281l7-18A1 1 0 0 1 12 2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <div class="text-center">
+                        <p class="text-white self-center">18km(h)</p>
+                        <p class="text-white self-center font-semibold text-sm">Vent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
-  
-  <div class="flex flex-col text-center gap-6">
-    <h1 class="mt-10 text-4xl">Le Havre</h1>
-    <p class="text-3xl">3°c</p>
-
-
-  </div>
 
 
 
 
-  
-  
 
-  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+
+
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
+
 </html>
