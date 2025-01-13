@@ -32,22 +32,21 @@
         <div class="flex my-3">
             <img src="./assets/img/example.png" class="w-[12rem]" alt="">
 
-            <div class="flex flex-col gap-1 mb-4 self-center">
+            <div class="flex flex-col mb-4 self-center">
 
                 <p class=" text-2xl text-gray-100 font-light">particulièrement nuageux</p>
                 <p class=" text-5xl text-gray-50">2°c</p>
-                <p>Ressenti : 4°c</p>
-                <div class="flex gap-8 text-lg">
+                <p class="">Ressenti : 4°c</p>
+                <div class="flex gap-8">
                     <p>Min -2°c</p>
                     <p>Max 8°c</p>
                 </div>
             </div>
         </div>
-        <div class="flex flex-col glass w-11/12 m-auto rounded-xl justify-center gap-2 text-white p-2">
+        <div class="flex flex-col glass shadow-md w-11/12 m-auto rounded-xl justify-center gap-2 text-white p-4">
             <div class="flex flex-row justify-around">
 
-
-                <div class="flex flex-col justify-around w-4/12 text-center">
+                <div class="flex flex-col justify-around w-4/12 text-center gap-2">
                     <i class='bx bx-water text-5xl'></i>
                     <div>
                         <p class="text-white self-center">80%</p>
@@ -55,8 +54,7 @@
                     </div>
                 </div>
 
-
-                <div class="flex flex-col justify-around w-4/12 text-center">
+                <div class="flex flex-col justify-around w-4/12 text-center gap-2">
                     <svg class="w-[48px] h-[48px] text-yellow-400 self-center" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         viewBox="0 0 24 24">
@@ -70,8 +68,7 @@
                     </div>
                 </div>
 
-
-                <div class="flex flex-col justify-around w-4/12">
+                <div class="flex flex-col justify-around w-4/12 gap-2">
                     <svg class="w-[48px] h-[48px] text-gray-50 self-center" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         viewBox="0 0 24 24">
@@ -86,6 +83,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="overflow-x-auto m-2 text-white">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <p class="text-gray-400 my-2">Prévisions sur les cinq prochains jours</p>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr class="bg-blue-600/50">
+                  <th>Demain</th>
+                  <td><img src="./assets/img/example.png" alt="" class="h-[3rem]"></td>
+                  <td>Ensoleillé</td>
+                  <td>13°c</td>
+                </tr>
+                <!-- row 2 -->
+                <tr class="">
+                    <th>Demain</th>
+                    <td><img src="./assets/img/example.png" alt="" class="h-[3rem]"></td>
+                    <td>Ensoleillé</td>
+                    <td>13°c</td>
+                  </tr>
+                <!-- row 3 -->
+                <tr class="">
+                    <th>Demain</th>
+                    <td><img src="./assets/img/example.png" alt="" class="h-[3rem]"></td>
+                    <td>Ensoleillé</td>
+                    <td>13°c</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+
     </div>
 
 
