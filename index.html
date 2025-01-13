@@ -11,7 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body class="bg-gradient-to-br from-blue-500 min-h-screen">
+<body class="bg-gradient-to-br from-indigo-500 min-h-screen">
 
     <div class="flex flex-col  max-w-[800px] m-auto">
         <div class="flex flex-row justify-between px-8 pt-5">
@@ -34,6 +34,7 @@
         <div class="divider my-0"></div>
 
         <!-- DRAWER -->
+
         <div id="drawer"
             class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-slate-800 w-80"
             tabindex="-1" aria-labelledby="drawer-label">
@@ -49,34 +50,54 @@
             </button>
 
             <div class="flex flex-col text-xl ml-2 gap-1 mt-6 justify-start text-white">
-                <a href="" class="px-1 py-2 hover:bg-slate-200 hover:text-slate-800 rounded-lg"><i class='bx bxs-home self-center mr-2'></i>Accueil</a>           
-                <a href="" class="px-1 py-2 hover:bg-slate-200 hover:text-slate-800 rounded-lg"><i class='bx bxs-heart self-center mr-2' ></i>Favoris</a>
-                <form class="mt-8">   
-                    <label for="search-city" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Rechercher</label>
+                <a href="" class="px-1 py-2 hover:bg-slate-200 hover:text-slate-800 rounded-lg"><i
+                        class='bx bxs-home self-center mr-2'></i>Accueil</a>
+                <a href="" class="px-1 py-2 hover:bg-slate-200 hover:text-slate-800 rounded-lg"><i
+                        class='bx bxs-heart self-center mr-2'></i>Favoris</a>
+                <form class="mt-2">
+                    <label for="search-city"
+                        class="text-sm font-medium text-gray-900 sr-only dark:text-white">Rechercher</label>
                     <div class="relative">
-                        <input type="search-city" id="default-search" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50" placeholder="Saisissez une ville" />
-                        <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class='bx bx-search'></i></button>
+                        <input type="search-city" id="default-search"
+                            class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+                            placeholder="Saisissez une ville" />
+                        <button type="submit"
+                            class="text-white absolute end-2.5 bottom-2.5 bg-indigo-400 hover:bg-indigo-600 font-medium rounded-lg text-sm px-4 py-2"><i
+                                class='bx bx-search'></i></button>
                     </div>
-                </form>    
-            </div>     
-            
-            <div class="flex flex-col p-4">
+                </form>
+            </div>
 
-                <div class="flex glass bg-slate-400 p-16 text-gray-800">
-                    <p class="text-left">Nantes</p>
+            <div class="flex flex-col mt-2 ml-2 gap-2">
 
+                <div class="flex glass bg-indigo-400 text-gray-800 h-20 py-2 rounded-xl justify-between shadow-md">
+                    <div class="flex">
+                        <img src="./assets/img/example.png" alt="" class="w-24 h-24 self-center">
+                        <div class="flex flex-col self-center">
+                            <p class="font-semibold text-lg">Le Havre</p>
+                            <p>13°c</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 self-center mr-2 text-2xl font-bold">
+
+                        <button>
+                            <i class='bx bx-heart'></i>
+                        </button>
+
+                        <button>
+                            <i class='bx bx-plus'></i>
+                        </button>
+                    </div>
                 </div>
 
 
             </div>
-
-
         </div>
 
 
 
 
-
+        <!-- BODY -->
         <div class="flex my-3">
             <img src="./assets/img/example.png" class="w-[12rem]" alt="">
 
@@ -140,7 +161,7 @@
                 </thead>
                 <tbody>
                     <!-- row 1 -->
-                    <tr class="bg-blue-600/50">
+                    <tr class="bg-indigo-600/50">
                         <th>Demain</th>
                         <td><img src="./assets/img/example.png" alt="" class="h-[3rem]"></td>
                         <td>Ensoleillé</td>
