@@ -3598,10 +3598,6 @@ details.collapse summary::-webkit-details-marker {
   height: 2.25rem;
 }
 
-.h-\[3rem\] {
-  height: 3rem;
-}
-
 .h-\[42px\] {
   height: 42px;
 }
@@ -3624,6 +3620,10 @@ details.collapse summary::-webkit-details-marker {
 
 .w-11\/12 {
   width: 91.666667%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-24 {
@@ -3652,10 +3652,6 @@ details.collapse summary::-webkit-details-marker {
 
 .w-80 {
   width: 20rem;
-}
-
-.w-\[12rem\] {
-  width: 12rem;
 }
 
 .w-\[42px\] {
@@ -3709,6 +3705,16 @@ details.collapse summary::-webkit-details-marker {
 
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[140deg\] {
+  --tw-rotate: 140deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[130deg\] {
+  --tw-rotate: 130deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
