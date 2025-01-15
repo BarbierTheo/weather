@@ -2,7 +2,12 @@ moment.locale('fr')
 
 document.getElementById('time').innerHTML += moment().format('L') + " " + moment().format('LT')
 
+
+let params = new URLSearchParams(document.location.search);
+// let city = params.get("q")
 let city = "havre"
+
+
 const apikey = "9fcb5abd746684e23386f8e4aafe5c26"
 
 let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}&units=metric&lang=fr`
@@ -22,7 +27,7 @@ fetch(url)
             document.getElementById('description').innerHTML += weather.description
         }
 
-        document.getElementById('temp').innerHTML = Math.round(10 * currentWeather.list[0].main['temp']) / 10 + "°c"
+        document.getElementById('temp').innerHTML = currentWeather.list[0].main['temp'].toPrecision(2) + "°c"
         document.getElementById('feel_like').innerHTML = `Ressenti : ${Math.round(10 * currentWeather.list[0].main['feels_like']) / 10} °c`
         document.getElementById('mintemp').innerHTML = `Min : ${Math.round(10 * currentWeather.list[0].main['temp_min']) / 10} °c`
         document.getElementById('maxtemp').innerHTML = `Max : ${Math.round(10 * currentWeather.list[0].main['temp_max']) / 10} °c`
@@ -31,6 +36,12 @@ fetch(url)
         // console.log(currentWeather.city.sunset)  lever de soleil
         // console.log(currentWeather.city.sunrise)    coucher de soleil
 
+        let sunset = new Date(currentWeather.city.sunset*1000)
+        console.log(moment(sunset).format("HH:MM"))
+        let sunrise = new Date(currentWeather.city.sunrise*1000)
+        console.log(moment(sunrise).format("HH:MM"))
+
+        document.getElementById('sun').innerHTML += moment(sunset).format("HH:MM")
 
         const windspeed = Math.round(10 * (currentWeather.list[0].wind['speed'] * 3600 / 1000) / 10)
         document.getElementById('wind').innerHTML = `${windspeed} km/h`
