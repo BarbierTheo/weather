@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weez'r</title>
 
-    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <!-- npx tailwindcss -i ./assets/css/dist.css -o ./assets/css/tailwind.css --watch -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body class="bg-gradient-to-br from-indigo-500 to-slate-800 min-h-screen">
@@ -16,7 +18,7 @@
     <div class="flex flex-col  max-w-[800px] m-auto">
         <div class="flex flex-row justify-between px-8 pt-5">
             <div class="flex flex-col ">
-                <p class="text-3xl text-gray-50 font-semibold">Le Havre</p>
+                <p class="text-3xl text-gray-50 font-semibold" id="cityname"></p>
                 <p class=" text-gray-300" id="time"></p>
             </div>
             <button class="text-white font-medium rounded-lg text-sm" type="button" data-drawer-target="drawer"
@@ -153,6 +155,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="flex w-11/12 border-2 rounded-lg m-auto my-4 p-3 justify-around" id="nexthours">
+
+
+        </div>
+
+
 
         <div class="overflow-x-auto m-2 text-white">
             <table class="table">
