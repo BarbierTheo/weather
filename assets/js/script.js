@@ -2,9 +2,8 @@ moment.locale('fr')
 
 document.getElementById('time').innerHTML += moment().format('L') + " " + moment().format('LT')
 
-let city = "Havre"
+let city = "havre"
 const apikey = "9fcb5abd746684e23386f8e4aafe5c26"
-
 
 let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}&units=metric&lang=fr`
 
