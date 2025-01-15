@@ -4001,6 +4001,14 @@ details.collapse summary::-webkit-details-marker {
   --tw-gradient-to: #1e293b var(--tw-gradient-to-position);
 }
 
+.to-slate-700 {
+  --tw-gradient-to: #334155 var(--tw-gradient-to-position);
+}
+
+.to-slate-600 {
+  --tw-gradient-to: #475569 var(--tw-gradient-to-position);
+}
+
 .p-1 {
   padding: 0.25rem;
 }
