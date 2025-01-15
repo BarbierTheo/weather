@@ -1,22 +1,27 @@
 moment.locale('fr')
 
+
+const params = new URLSearchParams(document.location.search);
+let citySearch = params.get("city")
+
 document.getElementById('time').innerHTML += moment().format('L') + " " + moment().format('LT')
 
 
-let params = new URLSearchParams(document.location.search);
-// let city = params.get("q")
-let city = "havre"
+if(citySearch == "" || citySearch == null){
+    citySearch = "havre"
+}
+
 
 
 const apikey = "9fcb5abd746684e23386f8e4aafe5c26"
 
-let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}&units=metric&lang=fr`
+let url = `https://api.openweathermap.org/data/2.5/forecast?q=${citySearch}&appid=${apikey}&units=metric&lang=fr`
 
 // fetch("https://api.openweathermap.org/data/2.5/weather?q=Le Havre&appid=9fcb5abd746684e23386f8e4aafe5c26&units=metric&lang=fr")
 fetch(url)
     .then((response) => response.json())
     .then((currentWeather) => {
-        document.getElementById('cityname').innerText = city
+        document.getElementById('cityname').innerText = citySearch
 
         console.log(currentWeather)
 
@@ -37,9 +42,7 @@ fetch(url)
         // console.log(currentWeather.city.sunrise)    coucher de soleil
 
         let sunset = new Date(currentWeather.city.sunset*1000)
-        console.log(moment(sunset).format("HH:MM"))
         let sunrise = new Date(currentWeather.city.sunrise*1000)
-        console.log(moment(sunrise).format("HH:MM"))
 
         document.getElementById('sun').innerHTML += moment(sunset).format("HH:MM")
 
@@ -66,4 +69,4 @@ fetch(url)
     })
 
 
-
+    
