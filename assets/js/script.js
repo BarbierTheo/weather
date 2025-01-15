@@ -54,10 +54,16 @@ fetch(url)
 
         const windspeed = Math.round(10 * (currentWeather.list[0].wind['speed'] * 3600 / 1000) / 10)
         document.getElementById('wind').innerHTML = `${windspeed} km/h`
-        document.getElementById('windimg').classList.add(`rotate-[${currentWeather.list[0].wind['deg']}deg]`)
-
-
-
+        // document.getElementById('windimg').classList.add(`rotate-[${currentWeather.list[0].wind['deg']}deg]`)
+        document.getElementById('windsvg').innerHTML = `
+                         <svg class="w-[48px] h-[48px] text-gray-50 self-center" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24" id="windimg" style="transform: rotate(${currentWeather.list[0].wind['deg']}deg);">
+                            <path fill-rule="evenodd"
+                                d="M12 2a1 1 0 0 1 .932.638l7 18a1 1 0 0 1-1.326 1.281L13 19.517V13a1 1 0 1 0-2 0v6.517l-5.606 2.402a1 1 0 0 1-1.326-1.281l7-18A1 1 0 0 1 12 2Z"
+                                clip-rule="evenodd" />
+                         </svg>`
+                         
         for (let i = 1; i <= 5; i++) {
 
             document.getElementById('nexthours').innerHTML += `<div class="flex flex-col">
